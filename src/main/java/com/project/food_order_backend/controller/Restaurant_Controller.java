@@ -10,12 +10,13 @@ import com.project.food_order_backend.service.Restaurant_Service;
 
 @RestController
 @RequestMapping("/restaurants")
+@CrossOrigin("*")
 public class Restaurant_Controller {
 
     @Autowired
     private Restaurant_Service restaurantService;
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Restaurant> getRestaurants() {
         return restaurantService.getAllRestaurants();
     }

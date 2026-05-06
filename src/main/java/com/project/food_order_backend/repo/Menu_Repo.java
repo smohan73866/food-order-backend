@@ -16,6 +16,6 @@ public interface Menu_Repo extends JpaRepository<MenuItem, Long> {
     List<MenuItem> findByPriceLessThan(double price);
 
     // Find menu items by category
-    List<MenuItem> findByCategory(String category);
+    //List<MenuItem> findByCategory(String category);
 
 }
