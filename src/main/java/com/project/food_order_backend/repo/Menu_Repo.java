@@ -9,6 +9,8 @@ import com.project.food_order_backend.model.MenuItem;
 @Repository
 public interface Menu_Repo extends JpaRepository<MenuItem, Long> {
 
+    List<MenuItem> findByRestaurantId(Long restaurantId);
+
     // Find menu items by name
     List<MenuItem> findByName(String name);
 

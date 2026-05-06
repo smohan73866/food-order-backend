@@ -14,9 +14,15 @@ public class Menu_Service {
     @Autowired
     private Menu_Repo menuRepo;
 
+    public List<MenuItem> getMenuByRestaurantId(Long restaurantId) {
+        return menuRepo.findByRestaurantId(restaurantId);
+    }
+
     public List<MenuItem> getAllMenuItems() {
         return menuRepo.findAll();
     }
+
+
 
     public MenuItem addMenuItem(MenuItem item) {
         return menuRepo.save(item);
