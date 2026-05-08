@@ -1,6 +1,6 @@
 package com.project.food_order_backend.model;
 
-
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -26,5 +26,6 @@ public class MenuItem {
 
     @ManyToOne
     @JoinColumn(name = "restaurant_id")
+    @JsonBackReference
     private Restaurant restaurant;
 }
