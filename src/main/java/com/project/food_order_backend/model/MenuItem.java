@@ -1,7 +1,6 @@
 package com.project.food_order_backend.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-
 import jakarta.persistence.*;
 import lombok.*;
 
